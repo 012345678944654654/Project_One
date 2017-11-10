@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="sr"> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+<title>Smestaj</title>
+<link rel="stylesheet" href="style.css">
+  
+
+
+</head>
+<body>
+<div id="wrapper">
+
+ <header id="header">
+    <h1 id="logo">Hotel</h1>
+   <div id='date' class="somid"></div>
+
+<script>
+var months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+    ],
+    d, m, y, now, out_string;
+now = new Date();
+d = now.getDate();
+m = now.getMonth();
+y = now.getFullYear();
+
+
+out_string = d + '. ' + months[m] + ' . ' + y;
+
+document.getElementById('date').innerHTML = out_string;
+</script>
+
+
+<div id="MyClockDisplay" class="clock"></div>
+<script>
+function showTime(){
+ var date= new Date();
+ var h=date.getHours();
+ var m=date.getMinutes();
+ var s=date.getSeconds();
+ var session="AM";
+ 
+ if(h==0){h=12;
+}
+
+if(h>12){
+ h=h-12;
+ session="PM";
+}
+h=(h<10)?"0" + h:h;
+m=(m<10)?"0" + m:m;
+s=(s<10)?"0" + s:s;
+var time= h + ":"+ m + ":" + s+ ""+ session;
+document.getElementById("MyClockDisplay").innerText= time;
+document.getElementById("MyClockDisplay").textContent=time;
+
+setTimeout(showTime,1000);
+}
+
+showTime();
+</script>  
+</header>
+
+<div id="div_two">
+<img src="https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?h=350&auto=compress&cs=tinysrgb" alt="" id="current_two">
+<img src="https://images.pexels.com/photos/97083/pexels-photo-97083.jpeg?h=350&auto=compress&cs=tinysrgb" alt="" class="thumb_two">
+<img src="https://images.pexels.com/photos/271643/pexels-photo-271643.jpeg?h=350&auto=compress&cs=tinysrgb" alt="" class="thumb_two">
+<img src="https://images.pexels.com/photos/271634/pexels-photo-271634.jpeg?h=350&auto=compress&cs=tinysrgb" alt="" class="thumb_two">
+<img src="https://images.pexels.com/photos/358527/pexels-photo-358527.jpeg?h=350&auto=compress&cs=tinysrgb" alt="" class="thumb_two">
+<img src="https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg?h=350&auto=compress&cs=tinysrgb" alt="" class="thumb_two">
+<img src="https://images.pexels.com/photos/210265/pexels-photo-210265.jpeg?h=350&auto=compress&cs=tinysrgb" alt="" class="thumb_two">
+<img src="https://images.pexels.com/photos/276625/pexels-photo-276625.jpeg?h=350&auto=compress&cs=tinysrgb" alt="" class="thumb_two">
+<img src="https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg?h=350&auto=compress&cs=tinysrgb " alt="" class="thumb_two">
+<img src="https://images.pexels.com/photos/77931/pexels-photo-77931.jpeg?h=350&auto=compress&cs=tinysrgb" alt="" class="thumb_two">
+<img src="https://images.pexels.com/photos/276746/pexels-photo-276746.jpeg?h=350&auto=compress&cs=tinysrgb" alt="" class="thumb_two">
+ </div>
+ 
+
+ 
+<script>
+var current=document.getElementById('current_two');
+var slike=document.getElementsByClassName('thumb_two');
+
+for(var i=0; i<slike.length; i++){
+  slike[i].addEventListener('click',display);
+}
+
+function display() {
+  var sl=this.getAttribute('src');
+  current.setAttribute('src',sl);
+  
+
+}
+
+
+</script> 
+
+<nav id="menu">
+<ul>
+<li><a href="index.html">Pocetna</a></li>
+<li><a href="O nama.html">O nama</a></li>
+<li><a href="Smestaj.html">Smestaj</a></li>
+<li><a href="Rezervacija.html">Rezervacija</a></li>
+<li><a href="Kontakt.html">Kontakt</a></li>
+</ul>
+</nav>
+
+<div id="content">
+<div id="main_title">Smestaj</div> 
+<div class="room">
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin diam est, iaculis at metus vitae, vestibulum lacinia velit. Sed sollicitudin accumsan urna sit amet pellentesque. Sed molestie dignissim augue at venenatis. Nulla mauris velit, fringilla id gravida et, facilisis quis ante. Nullam fermentum magna mi. Duis porta tristique justo, in auctor neque pellentesque a. Aenean dignissim consectetur ante. Sed rutrum, elit vel ornare condimentum, orci mi vehicula ligula, sed tincidunt neque ante eu orci. Integer tempus, ante lacinia interdum porta, nibh mi ullamcorper risus, a suscipit nunc arcu in tellus. Etiam ornare augue ut elit ornare, ut eleifend metus mollis. Vivamus sit amet libero eu quam auctor commodo facilisis quis sapien.   
+</p>
+ 
+</div>
+
+
+<div class="room_offer">
+<div class="room_offer_title">Jednokrevetna soba</div>
+<div class="room_text">
+<p>Nam semper a nibh id imperdiet.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<p>Praesent et ipsum sagittis, elementum ipsum id, sollicitudin lectus.</p>
+<p>Nunc ac ante ut dui mollis facilisis in eu sem.</p>
+ 
+ 
+ 
+ 
+</div>
+</div> 
+
+<div class="room_offer_one">
+ <div class="room_offer_title">Dvokrevetna soba</div>
+ <div class="room_text">
+<p>Fusce id est vel tortor euismod feugiat a a lorem.</p>
+<p>Sed viverra ante vitae tristique euismod.</p>
+<p>Etiam elementum nisi sit amet sem finibus sodales.</p>
+<p>Proin placerat justo nec enim faucibus, at molestie erat ultrices.</p>
+ 
+ 
+ 
+ 
+</div>
+</div>  
+ 
+<div class="room_offer_one">
+ <div class="room_offer_title">Apartman</div>
+ <div class="room_text">
+<p>Integer tincidunt urna vitae tempus hendrerit.</p>
+<p>Quisque mollis ante vel eleifend commodo.</p>
+<p>Nunc et tellus id nunc cursus ultrices ut at eros.</p>
+<p>Etiam tristique turpis quis libero maximus, at viverra diam suscipit.</p>
+ 
+ 
+  
+ 
+</div>
+</div>  
+
+
+ 
+	 
+
+
+ 
+
+  
+
+
+
+
+
+ 
+
+ 
+</div>
+<footer id="footer">
+Copyright &copy 2017
+</footer>
+</div>
+</body>
+</html> 
